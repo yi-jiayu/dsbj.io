@@ -1,0 +1,12 @@
+runtime: go
+api_version: go1
+
+handlers:
+- url: /$
+  static_files: static/index.html
+  upload: static/index.html
+- url: /templates
+  static_dir: /templates
+  application_readable: true
+- url: /.*
+  script: _go_app

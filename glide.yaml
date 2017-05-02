@@ -1,0 +1,7 @@
+package: github.com/yi-jiayu/dsbj.io
+import:
+- package: google.golang.org/appengine
+  version: ~1.0.0
+  subpackages:
+  - datastore
+  - log

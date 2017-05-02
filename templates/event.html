@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="{{.Description}}">
+  <meta property="og:title" content="{{.Title}}">
+  <meta name="og:description" content="{{.Description}}">
+  <meta property="og:url" content="https://dsbj-io.appspot.com/events/{{.Id}}">
+
+  <title>{{.Title}}</title>
+</head>
+<body>
+<div>
+  <a href="/">Home</a>
+</div>
+<h1>{{.Title}}</h1>
+<p>{{.Description}}</p>
+<p>Location: {{.Location}}</p>
+<p>Start: {{.Start}}</p>
+<p>End: {{.End}}</p>
+<p>POC: {{.POC}}</p>
+<p>Attendees: {{.Attendees | join}}</p>
+<div>
+  <form action="/events/{{.Id}}/attendees" method="post">
+    <label>Attend event <input type="text" name="attendee"></label>
+    <input type="submit">
+  </form>
+</div>
+</body>
+</html>
